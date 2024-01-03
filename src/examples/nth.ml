@@ -11,9 +11,9 @@ nth(xs,n,r) =
 
 (*
 
-ex v3; Invalid_argument((n<0)=true, (), v3); Norm(res=v3)
+ex v3; Invalid_argument((n<0)=true, (), v3); ens res=v3
 \/
-ex v18 v20; ens (n<0)=false/\v20=lambda(\l n v17 -> ex v8; Failure(is_nil(l)=true, (), v8); Norm(v17=v8)); v20(l, n, v18); Norm(res=v18)
+ex v18 v20; ens (n<0)=false/\v20=lambda(\l n v17 -> ex v8; Failure(is_nil(l)=true, (), v8); ens v17=v8; v20(l, n, v18); ens res=v18
 
    *)
 
