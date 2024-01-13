@@ -278,6 +278,8 @@ let check_sat f =
   in
   let ctx = mk_context cfg in
   Z3.Params.update_param_value ctx "timeout" "5000";
+  Z3.set_global_param "smt.random_seed" "123";
+  
   let expr =
     let@ _ = Debug.span (fun _ -> debug ~at:4 ~title:"build formula" "") in
     f ctx
